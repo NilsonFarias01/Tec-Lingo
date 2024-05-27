@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+/* Define as variáveis de cores principais */
+:root {
+  --grey: #F1F0F6;
+  --terracotta: #CE7B6C;
+  --dark-grey: #8D8D8D;
+  --light: #ede9e6;
+  --dark: #000;
+  --green: #81D43A;
+  --light-green: #E3FFCB;
+  --blue: #367aca;
+  --light-blue: #708fb5;
+  --dark-blue: #2e3c54;
+  --red: #ff7373;
+  --gray: #808080;
+  --beige: #f9f0e9;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(var(--beige), rgb(231, 238, 238));
+  background-attachment: fixed;
+  color: var(--dark);
+  overflow: overlay;
+  padding: 10px;
+}
+
+h2{
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: color 0.3s, font-size 0.3s;
+}
+
+a:hover {
+  color: var(--red);
+}
+
+header {
+  color: var(--dark);
+  text-align: center;
+  padding-top: 30px;
+}
+
+.voltar {
+  background-color: var(--blue);
+  color: var(--white);
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.voltar:hover {
+  background-color: var(--red);
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.faq-collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-inline: auto;
+  max-width: 600px;
+  padding-bottom: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.faq-question {
+  background-color: var(--blue);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 14px 20px;
+  position: relative;
+}
+
+.faq-question:hover {
+  background-color: var(--red);
+}
+
+.faq-question:active {
+  opacity: 0.9;
+}
+
+.faq-question.active {
+  background-color: var(--red);
+}
+
+.faq-question > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  padding: 5px;
+  width: 20px;
+}
+
+button svg {
+  fill: var(--white);
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.faq-answer {
+  display: none;
+}
+.faq-answer span:hover{
+  color: var(--white);
+}
+
+.faq-question.active .faq-answer {
+  animation: fadeIn 0.3s;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .faq-question h2 {
+      font-size: 20px;
+  }
+}
+
+/* Define estilos para a imagem logo */
+.logo {
+  height: 70px;
+  width: 70px;
+  margin-left: 25px;
+}
+
+/* Define estilos para o nome da empresa */
+.tech {
+  font-family: 'Sedan', serif;
+  font-style: italic;
+  color: var(--dark-blue);
+  font-size: 70px;
+  margin: 0;
+}
+
+.lingo {
+  font-family: 'Sedan', serif;
+  color: var(--terracotta);
+  font-size: 55px;
+}
+
+/* Define estilos para o nome da empresa no rodapé */
+.tech1 {
+  font-family: 'Sedan', serif;
+  font-style: italic;
+  color: var(--dark-blue);
+  font-size: 37px;
+}
+
+.lingo1 {
+  font-family: 'Sedan', serif;
+  color: var(--terracotta);
+  font-size: 30px;
+}
+
+/* RODAPÉ */
+/* estiliza o rodapé da página */
+footer {
+  padding: 25px 0;
+  background-color: var(--white);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* Adiciona espaço automático no topo */
+}
+
+footer .interface {
+  display: flex;
+  justify-content: center; /* Centralize o conteúdo se necessário */
+  width: 100%;
+}
+
+footer .interface ul {
+  width: 50%;
+  margin: 0 auto; /* Centralize a lista */
+}
+
+footer .interface p1 {
+  font-size: 10px;
+  color: var(--dark);
+}
+/* FIM DO RODAPÉ */

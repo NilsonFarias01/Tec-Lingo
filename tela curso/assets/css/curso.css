@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+/* Cores do projeto */
+:root {
+    --white: #fff;
+    --terracotta: #CE7B6C;
+    --dark-grey: #8D8D8D;
+    --light: #ede9e6;
+    --dark: #000;
+    --green: #81D43A;
+    --light-green: #E3FFCB;
+    --blue: #367aca;
+    --light-blue: #708fb5;
+    --dark-blue: #2e3c54;
+    --red: #ff7373;
+    --red-blood: #ff0000;
+    --beige: #f9f0e9;
+}
+
+/* Define estilos básicos para todos os elementos */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background: var(--light);
+    overflow-x: hidden;
+}
+
+nav {
+    background: var(--blue);
+    height: 64px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+	grid-gap: 28px;
+    justify-content: space-between; /* Adicionado */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Define estilos para a imagem logo */
+.logo {
+    height: 40px;
+    width: 40px;
+	float: right;
+}
+
+/* Define estilos para o nome da empresa */
+.brand {
+    display: flex; 
+    align-items: center; 
+}
+
+.tech {
+    font-family: 'Sedan', serif;
+    font-style: italic;
+    color: var(--dark-blue);
+    font-size: 37px;
+}
+
+.lingo {
+    font-family: 'Sedan', serif;
+    color: var(--terracotta);
+    font-size: 30px;
+}
+
+/* Define estilos para o grupo de formulário na barra de navegação */
+nav .form-group {
+    position: relative;
+}
+
+/* Define estilos para o campo de busca */
+nav .form-group input {
+    width: 100%;
+    background: var(--light);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px 36px 10px 16px;
+    transition: all .3s ease;
+}
+
+/* Define estilos para a entrada de formulário quando está em foco */
+nav .form-group input:focus {
+    box-shadow: 0 0 0 1px var(--light), 0 0 0 4px var(--red);
+}
+
+/* Define estilos para o ícone no grupo de formulário */
+nav .form-group .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    color: var(--dark-grey);
+}
+
+nav .profile .profile-link.show {
+    opacity: 1;
+    pointer-events: visible;
+    top: 100%;
+}
+
+nav .profile .profile-link {
+	position: absolute;
+	top: calc(100% + 10px);
+	right: 0;
+	background: var(--blue);
+	padding: 10px 0;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+	border-radius: 10px;
+	width: 160px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .3s ease;
+}
+
+/* Define estilos para mostrar o menu suspenso do perfil */
+nav .profile .profile-link.show {
+	opacity: 1;
+	pointer-events: visible;
+	top: 100%;
+}
+
+/* Define estilos para os links no menu suspenso do perfil */
+nav .profile .profile-link a {
+	padding: 10px 16px;
+	display: flex;
+	grid-gap: 10px;
+	font-size: 14px;
+	color: var(--dark);
+	align-items: center;
+	transition: all .3s ease;
+}
+
+.profile-link li{
+    text-align: -webkit-match-parent;
+}
+
+/* Define estilos para os links no menu suspenso do perfil ao passar o mouse */
+nav .profile .profile-link a:hover {
+	background: var(--light);
+}
+
+/* Define estilos para os elementos fotos */
+nav .profile {
+    position: relative;
+}
+
+/* Define estilos para o campo da imagem  */
+nav .profile img{
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Define estilos para o formulário na barra de navegação */
+nav form {
+	max-width: 700px;
+	width: 100%;
+	margin-right: auto;
+}
+
+/* Define estilos para a classe de descrição*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 ; 
+}
+
+/* Define estilos para o nome do curso */
+.topo {
+    text-align: center;
+}
+
+/* Define estilos para o texto de descrição */
+.descricao {
+    flex: 1;
+    display: flex;
+    padding: 5px;
+}
+
+/* Define estilos para o paragrafo de descrição */
+.descricao p {
+    margin: 10px;
+}
+
+/* Define estilos para as linhas do paragrafo de descrição */
+.descricao p samp {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+/* Define estilos para a lista de descrição */
+.comen {
+    padding: 20px;
+    margin-top: -140px;
+    font-weight: bold;
+}
+
+.comen ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.comen li {
+    margin: 10px 0; 
+    padding-left: 20px; 
+    text-indent: -20px; 
+}
+
+/* Define estilos para o tamanho do vídeo */
+video {
+	width: 640px; 
+    height: 360px;
+    border-radius: 10px;
+}
+
+.video-container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Define estilos para os hiperlinks */
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+p a:hover{
+    color: var(--red);
+}
+
+/* Define estilos para o nome do curso */
+h1 {
+    padding: 00;
+    font-size: 70px;  
+    font-weight: bold; 
+    direction: ltr;  
+    word-spacing: 7px;
+    color:var(--blue)   
+}
+
+.topo h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.topo span, .topo span1 {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+h1 span {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+h1 span1 {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+/* Define estilos para o subtítulo */
+h2 {
+    font-size: 20px; 
+    font-weight: bold; 
+    color:var(--dark);
+    text-align: center;
+}
+
+
+/* Define estilos para as informações do curso */
+h3 {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: var(--dark);
+}
+
+h3 a:hover{
+    color: var(--red);
+}
+
+/* Estilo cards */
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* RODAPÉ */
+/* estiliza o rodapé da página */
+footer {
+	padding: 25pX;
+	background-color: var(--white);
+	text-align: center;
+}
+
+/* estiliza o logo do rodapé */
+.logo-footer {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+}
+
+/* estiliza a disposição do texto no rodapé */
+footer .interface {
+  	display: flex;
+}
+
+/* estiliza a disposição dos links no rodapé */
+footer .interface ul {
+  	width: 50%;
+}
+
+/* estiliza o texto informativo da empresa */
+footer .interface p1 {
+  	font-size: 10px;
+}
+/* RODAPÉ*/
+
+
+/* TABELA DE CURSOS */
+.course-content {
+    max-width: 800px;
+    margin-bottom: 70px;
+    margin: 29px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.course-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.expand-all {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.section {
+    border: 1px solid var(--dark);
+    margin-bottom: 5px;
+    padding: 5px; 
+    border-radius: 8px;
+    background-color: var(--beige);
+}
+.section img{
+    height: 15px;
+    width: 15px;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+.section-header span {
+    margin: 0;
+    color: var(--dark-grey);
+}
+
+.section-content {
+    display: none; 
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.lesson {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.lesson video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.toggle-btn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

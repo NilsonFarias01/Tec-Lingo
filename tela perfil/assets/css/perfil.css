@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family-roboto:300,400,500,700&display-swap");
+
+
+
+body {
+    background: var(--beige);
+    margin-top: 20px;
+}
+:root {
+    --white: #fff;
+    --terracotta: #CE7B6C;
+    --dark-grey: #8D8D8D;
+    --light: #ede9e6;
+    --dark: #000;
+    --green: #81D43A;
+    --light-green: #E3FFCB;
+    --blue: #367aca;
+    --light-blue: #708fb5;
+    --dark-blue: #2e3c54;
+    --red: #ff7373;
+    --red-blood: #ff0000;
+    --beige: #f9f0e9;
+}
+
+
+.ui-w-80 {
+    width : 80px !important;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background  : rgba(0, 0, 0, 0);
+    color       : var(--);
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    border-color: var(--blue);
+    background  : transparent;
+    color       : var(--red);
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.card {
+    background-clip: padding-box;
+    box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position  : absolute;
+    visibility: hidden;
+    width     : 1px;
+    height    : 1px;
+    opacity   : 0;
+}
+
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: var(--dark-grey) !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+    color: var(--dark-blue) !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+    color: var(--blue) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: var(--dark-blue) !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.card-overflow-hidden{
+    background-color: var(--blue);
+}
+
+/* Estilo para cartões menores */
+/* Estilo para cartões menores */
+.card-small {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: var(--dark);
+    width: 100%; /* Ajuste a largura conforme necessário */
+    padding: 3px; /* Espaçamento interno menor */
+}
+
+.card-small .card-body {
+    padding: 10px; /* Espaçamento interno menor */
+}
+
+.card-small .card-title {
+    font-size: 16px; /* Título menor */
+    color: var(--dark);
+}
+
+.card-small .card-text {
+    font-size: 14px; /* Texto menor */
+    color: var(--dark);
+}
+
+.card-small .btn {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 5px 10px; /* Botão menor */
+    font-size: 14px; /* Texto do botão menor */
+}

@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+/* estilo de cores */
+:root {
+	--white: #fff;
+	--terracotta: #CE7B6C;
+	--dark-grey: #8D8D8D;
+	--light: #ede9e6;
+	--dark: #000;
+	--green: #81D43A;
+	--light-green: #E3FFCB;
+	--blue: #367aca;
+	--light-blue: #708fb5;
+	--dark-blue: #2e3c54;
+	--red: #ff7373;
+  --red-blood:#ff0000;
+  --beige:#f9f0e9;
+}
+
+/* estilo geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display';
+}
+
+/* página */
+body {
+  background-color: var(--beige);
+  background-size: cover;
+}
+
+/* imgs */
+img {
+  background-position: center top;
+  background-size: auto; 
+  height: 80%;
+  width: 100%;
+}
+
+/* estiliza imagem dos cursos */
+.img-tec {
+  width: 200px;
+  height: 100px;
+  border-radius: 15px;
+}
+
+/* Estilo para imagens de colaboradores */
+.img-colaborador {
+  height: 150px;
+  width: 150px;
+  transition: border-color 0.3s, transform 0.3s; 
+  border-radius: 50%;
+}
+
+/* Estilo para imagens de colaboradores quando hover */
+.img-colaborador:hover {
+  border: 2px solid var(--red); 
+  transform: scale(1.05); 
+  border-radius: 50%;
+}
+
+/* Estiliza o contêiner dos colaboradores para centralizar o texto */
+.nome-colaborador {
+  text-align: center;
+}
+
+/* tamanho tela inicial */
+.tela-inicial {
+  max-width: 1280px;
+  margin:  0 auto;
+}
+
+/* estiliza os títulos missão/visão/valores */
+.cards h3 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--red);
+}
+
+/* titulo */
+h2#titulo {
+  font-size: 38px;
+  text-align: center;
+}
+
+h2#titulo samp {
+  background-color:var(--red);
+}
+
+h2#titulo-curso {
+  font-size: 38px;
+  text-align: center;
+  color: #367aca;
+  margin-bottom: 20px;
+}
+
+h2#titulo-colaboradores {
+  font-size: 38px;
+  text-align: center;
+  color: #367aca;
+  margin-bottom: 20px;
+}
+
+.text-inicial {
+  display: inline-flex; 
+  align-items: center;
+}
+
+/* estiliza logo da empresa */
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-left: 30px;
+}
+
+/* estiliza nome empresa tech */
+.tech {
+	font-family: 'Sedan',  serif;
+	font-style: italic;
+	color: var(--dark-blue);
+	font-size: 37px;
+  margin: -3px;
+}
+
+/* estiliza nome da empresa lingo */
+.lingo {
+	font-family: 'Sedan', serif;
+	color: var(--terracotta);
+	font-size: 30px;
+}  
+
+/* cabeçalho inicial */
+header {
+  padding: 20px 10px;
+  background-color: var(--white);
+}
+
+header .tela-inicial {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+header a {
+  color: var(--blue);
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s;
+}
+
+header a:hover {
+  color: var(--red);
+  transform: scale(1.08);
+}
+
+/* estiliza todos os links */
+a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: color 0.3s, font-size 0.3s;
+}
+
+/* Estilo para links quando estão sendo hoverados */
+a:hover {
+  color: var(--red);
+  font-size: 105%; 
+}
+
+/* estiliza os botões de navegação do cabeçalho */
+nav {
+  list-style-type: none;
+  font-size: 23px;
+}
+
+/* estiliza a lista de botões do cabeçalho */
+li {
+  display: inline-block;
+  padding: 0 40px;
+}
+
+/* estiliza o texto inicial do sobre nós */
+.flex {
+  display: flex;
+}
+
+/* estiliza card dos cursos */
+.container {
+  padding: 80px 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* estiliza card dos colaboradores */
+.container-colaborador {
+  padding: 50px 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* serve para ajustar o espaçamento entre os cards */
+.elemento {
+  flex: 1; 
+  margin: 5px; 
+}
+
+/* estiliza a foto da equipe */
+.equipe {
+  border-radius: 50%;
+  flex: 1; 
+  margin: 10px;
+}
+
+/* Estiliza a div de cards */
+.cards {
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+
+/* estiliza os cards missão/visão/valores */
+.card {
+  width: calc(33.33% - 20px); 
+  margin-bottom: 20px; 
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--light);
+  box-shadow: 4px 4px 16px var(--dark);
+}
+
+/* estiliza os cards dos cursos */
+.card-cursos {
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--light);
+  box-shadow: 4px 4px 16px var(--dark);
+  display: flex;
+  text-align: center;
+}
+
+/* estiliza os cards dos colabores */
+.card-colaboradores {
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  width: 70%;
+}
+
+/* mudar cor botões cabeçalho */
+header .btn-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--blue);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* mudar cor botão formulário */
+header .btn-contato button:hover, form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px var(--red-blood);
+  color: var(--red);
+}
+
+/* ajusta o texto de introdução sobre nós */
+#sobre .txt-sobre {
+  color: var(--dark);
+  text-align: center;
+}
+
+/* ajusta título sobre nós */
+#sobre .txt-sobre h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom:30px ;
+}
+
+/* altera cor título sobre nós */
+#sobre .txt-sobre h2 span {
+  color: var(--blue);
+  display: block; 
+}
+
+/* define margem superior e inferior */
+#Sobre .txt-sobre p {
+  margin: 20px 0;
+}
+
+/* definindo preenchimento da seção */
+section#sobre {
+  padding: 40px 4%;
+}
+
+/* definindo preenchimento da seção */
+section.formulario-duvida {
+  padding: 80px 4%;
+}
+
+/* estiliza o formulário */
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--dark);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+}
+
+/* estiliza o tamanho do formulário */
+form input,form textarea {
+  width: 100%;
+  background-color: rgba(15, 15, 15, 0.288);
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: var(--dark);
+  font-size: 18px;
+}
+
+/* torna o campo de dúvida tamanho fixo */
+form textarea {
+  resize: none;
+  max-height: 1000;
+  color: var(--dark);
+}
+
+/* altera a distancia entre o botão enviar e o botão dúvida */
+form .btn-enviar {
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* estiliza o botão enviar do formulário */
+form .btn-enviar input {
+  width: 200px;
+  background-color: var(--blue);
+  color: var(--dark);
+  font-weight: 70%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+/* estiliza o rodapé da página */
+footer {
+  padding: 30px 4%;
+  background-color: var(--light-blue);
+  text-align: center;
+}
+
+/* estiliza o logo do rodapé */
+.logo-footer {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+/* estiliza a disposição do texto no rodapé */
+footer .interface {
+  display: flex;
+}
+
+/* estiliza a disposição dos links no rodapé */
+footer .interface ul {
+  width: 50%;
+}
+
+/* estiliza o texto informativo da empresa */
+footer .interface p1 {
+  font-size: 10px;
+}
+
+/* estiliza os botões de avançar e voltar do curso */
+.btn-proximo-curso, .btn-anterior-curso {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* estiliza os botões de avançar e voltar dos colaboradores */
+.btn-proximo-colaborador, .btn-anterior-colaborador {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* estiliza a imagem dos botões de avançar e voltar do curso */
+.btn-proximo-curso img, .btn-anterior-curso img {
+  width: 30px; 
+  height: 30px; 
+}
+
+/* estiliza a imagem dos botões de avançar e voltar dos colaboradores */
+.btn-proximo-colaborador img, .btn-anterior-colaborador img {
+  width: 30px; 
+  height: 30px; 
+}
